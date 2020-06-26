@@ -7,8 +7,6 @@ import axios from "axios";
 import "./App.css";
 
 const baseUrl = "http://api.openweathermap.org/data/2.5/";
-const apiKey = "bb4e4521bac8ebbd490409df984094ef";
-
 const override = css`
   display: block;
   margin: 30px;
@@ -22,7 +20,6 @@ export const InputForm = () => {
     sys: "",
     wind: "",
     main: "",
-    weather:[{description:''}]
   });
   const [loading, setLoading] = useState(false);
 
@@ -34,7 +31,7 @@ export const InputForm = () => {
     e.preventDefault();
     setLoading(true);
     const data = await axios.get(
-      `${baseUrl}/weather?q=${city}&appid=${apiKey}&units=metric`
+      `${baseUrl}/weather?q=${city}&appid=bb4e4521bac8ebbd490409df984094ef&units=metric`
     );
     data.status === 200 ? setLoading(false) : setLoading(true);
     setWeather({ ...data.data });

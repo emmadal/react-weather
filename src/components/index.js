@@ -22,10 +22,9 @@ const Input = styled.input`
 `;
 
 const H1 = styled.h1`
-  font-size: 5.8em;
+  font-size: 3.8em;
   font-family: "Dancing Script", "cursive";
   text-align: center;
-  margin: 15px;
   color: palevioletred;
   font-weight: bold;
 `;
