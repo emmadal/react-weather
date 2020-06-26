@@ -6,7 +6,7 @@ import InfosWeather from "./InfosWeather";
 import axios from "axios";
 import "./App.css";
 
-const baseUrl = "http://api.openweathermap.org/data/2.5/";
+const baseUrl = "https://api.openweathermap.org/data/2.5/";
 const override = css`
   display: block;
   margin: 30px;
