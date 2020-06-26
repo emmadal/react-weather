@@ -6,7 +6,6 @@ import InfosWeather from "./InfosWeather";
 import axios from "axios";
 import "./App.css";
 
-const baseUrl = "https://api.openweathermap.org/data/2.5/";
 const override = css`
   display: block;
   margin: 30px;
@@ -31,7 +30,7 @@ export const InputForm = () => {
     e.preventDefault();
     setLoading(true);
     const data = await axios.get(
-      `${baseUrl}/weather?q=${city}&appid=bb4e4521bac8ebbd490409df984094ef&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bb4e4521bac8ebbd490409df984094ef&units=metric`
     );
     data.status === 200 ? setLoading(false) : setLoading(true);
     setWeather({ ...data.data });
