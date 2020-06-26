@@ -30,7 +30,7 @@ export const InputForm = () => {
     e.preventDefault();
     setLoading(true);
     const data = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bb4e4521bac8ebbd490409df984094ef&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a4677af8fb1b7675ab6daecc2a24744f&units=metric`
     );
     data.status === 200 ? setLoading(false) : setLoading(true);
     setWeather({ ...data.data });
